@@ -122,6 +122,8 @@ function gulpBowerNormalize(userOptions) {
             file.path = Path.join(file.base, type, components.filename);
         } else if (options.typeTop) {
             file.path = Path.join(file.base, type, components.packageName, components.filename);
+        } else if (options.noType) {
+            file.path = Path.join(file.base, components.packageName, components.filename);
         } else {
             file.path = Path.join(file.base, components.packageName, type, components.filename);
         }
